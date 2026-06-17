@@ -2,7 +2,7 @@
 
 > 언제 어디서나 즐기는 캐주얼 게임 모음
 
-**▶ 바로 접속** → [https://mindweaver74.github.io/game-arcade](https://mindweaver74.github.io/game-arcade)
+**▶ 바로 접속** → [https://mindweaver74.github.io/Jutopia](https://mindweaver74.github.io/Jutopia/)
 
 ---
 
