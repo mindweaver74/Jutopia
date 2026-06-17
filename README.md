@@ -1,4 +1,4 @@
-# 🎮 GAME ARCADE
+# 🎮 Jutopia
 
 > 언제 어디서나 즐기는 캐주얼 게임 모음
 
@@ -48,7 +48,7 @@
 ## 📁 파일 구조
 
 ```
-game-arcade/
+Jutopia/
 ├── index.html   # 게임 허브 메인 페이지
 └── README.md    # 이 파일
 ```
