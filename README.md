@@ -16,7 +16,7 @@
 | ⏱️ 1초를 눌러라! | 반응속도 | [플레이](https://mindweaver74.github.io/One-Second) |
 | 🧱 벽돌깨기 REBORN | 아케이드 | [플레이](https://mindweaver74.github.io/brickblock) |
 | 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
-| 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger-reborn) |
+| 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
 
 ---
 
