@@ -17,12 +17,13 @@
 | 🧱 벽돌깨기 REBORN | 아케이드 | [플레이](https://mindweaver74.github.io/brickblock) |
 | 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
 | 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
+| ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942-reborn) |
 
 ---
 
 ## ✨ 특징
 
-- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 7개
+- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 8개
 - iOS / Android / PC 모든 환경 지원
 - 카카오톡 링크 공유로 즉시 접속 가능
 - 게임은 계속 추가될 예정
