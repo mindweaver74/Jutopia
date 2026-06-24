@@ -18,7 +18,7 @@
 | 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
 | 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
 | ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942-reborn) |
-| 🎯 너구리 저격 | 타이밍슈팅 | [플레이](https://mindweaver74.github.io/sniper) |
+| 🦝 너구리 저격 | 타이밍슈팅 | [플레이](https://mindweaver74.github.io/sniper) |
 
 ---
 
