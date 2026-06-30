@@ -17,7 +17,7 @@
 | 🧱 벽돌깨기 REBORN | 아케이드 | [플레이](https://mindweaver74.github.io/brickblock) |
 | 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
 | 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
-| ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942-reborn) |
+| ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942) |
 | 🎯 타이밍 저격 | 타이밍 | [플레이](https://mindweaver74.github.io/sniper) |
 | 👑 왕자의 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/prince) |
 | 🐧 펭귄의 동굴 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/penguin) |
