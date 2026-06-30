@@ -146,6 +146,8 @@ html, body {
 .card:nth-child(7){animation-delay:.35s}
 .card:nth-child(8){animation-delay:.40s}
 .card:nth-child(9){animation-delay:.45s}
+.card:nth-child(10){animation-delay:.50s}
+.card:nth-child(11){animation-delay:.55s}
 </style>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8357338943233901"
@@ -158,7 +160,7 @@ html, body {
 <div id="header">
   <div id="header-title">🎮 Jutopia</div>
   <div id="header-sub">언제 어디서나 즐기는 캐주얼 게임 모음</div>
-  <div id="game-count">총 10개 게임</div>
+  <div id="game-count">총 11개 게임</div>
 </div>
 
 <div id="grid">
@@ -294,11 +296,64 @@ html, body {
 
   <!-- 10. 왕자의 탈출 REBORN -->
   <a class="card card-new"
-     href="https://mindweaver74.github.io/Prince"
+     href="https://mindweaver74.github.io/prince"
      style="--accent:linear-gradient(90deg,#ffd700,#f84);--glow:rgba(255,180,0,0.6);--badge-bg:rgba(255,180,0,0.12);--badge-color:#ffd700;">
-    <span class="card-emoji">👑</span>
+    <span class="card-emoji" style="font-size:0;display:block;width:72px;height:72px;margin:0 auto 12px;">
+      <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+        <!-- 배경 원 -->
+        <circle cx="36" cy="36" r="34" fill="rgba(255,180,0,0.15)" stroke="rgba(255,180,0,0.4)" stroke-width="1.5"/>
+
+        <!-- 다리 (달리는 포즈) -->
+        <rect x="28" y="48" width="9" height="13" rx="3" fill="#c8a060" transform="rotate(-18,32,48)"/>
+        <rect x="37" y="48" width="9" height="13" rx="3" fill="#c8a060" transform="rotate(22,41,48)"/>
+
+        <!-- 몸통 -->
+        <rect x="24" y="30" width="24" height="20" rx="5" fill="#e8e8f8"/>
+
+        <!-- 벨트 -->
+        <rect x="24" y="46" width="24" height="4" rx="2" fill="#d4a030"/>
+
+        <!-- 머리 -->
+        <circle cx="36" cy="22" r="12" fill="#f5c88a"/>
+
+        <!-- 터번 -->
+        <rect x="24" y="14" width="24" height="10" rx="6" fill="#fff"/>
+
+        <!-- 눈 -->
+        <circle cx="40" cy="22" r="2.5" fill="#333"/>
+
+        <!-- 칼 (앞으로 뻗은 포즈) -->
+        <rect x="46" y="28" width="18" height="3" rx="1.5" fill="#ddd" transform="rotate(-15,46,28)"/>
+        <rect x="44" y="33" width="5" height="9" rx="1.5" fill="#d4a030" transform="rotate(-15,44,33)"/>
+
+        <!-- 앞팔 -->
+        <rect x="42" y="32" width="8" height="5" rx="2" fill="#e8e8f8" transform="rotate(-20,42,32)"/>
+
+        <!-- 달리기 먼지 -->
+        <circle cx="18" cy="58" r="3" fill="rgba(180,140,60,0.5)"/>
+        <circle cx="12" cy="56" r="2" fill="rgba(180,140,60,0.3)"/>
+        <circle cx="22" cy="61" r="1.5" fill="rgba(180,140,60,0.4)"/>
+
+        <!-- 왕관 -->
+        <polygon points="28,14 31,8 36,12 41,8 44,14" fill="#ffd700" stroke="#f80" stroke-width="0.5"/>
+        <circle cx="36" cy="12" r="1.5" fill="#f44"/>
+        <circle cx="29" cy="14" r="1" fill="#f44"/>
+        <circle cx="43" cy="14" r="1" fill="#f44"/>
+      </svg>
+    </span>
     <div class="card-name">왕자의 탈출</div>
     <div class="card-desc">탭해서 점프! 코인 모아 업그레이드<br>추격자를 피해 멀리 달려라!</div>
+    <span class="card-badge">무한런</span>
+  </a>
+
+
+  <!-- 11. 펭귄의 동굴 탈출 -->
+  <a class="card card-new"
+     href="https://mindweaver74.github.io/penguin"
+     style="--accent:linear-gradient(90deg,#4af,#a4f);--glow:rgba(100,150,255,0.6);--badge-bg:rgba(100,150,255,0.12);--badge-color:#4af;">
+    <span class="card-emoji">🐧</span>
+    <div class="card-name">펭귄의 동굴 탈출</div>
+    <div class="card-desc">드래그로 피하고 점프대로 점프!<br>절벽을 건너 동굴을 탈출하라</div>
     <span class="card-badge">무한런</span>
   </a>
 
