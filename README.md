@@ -22,12 +22,13 @@
 | 👑 왕자의 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/prince) |
 | 🐧 펭귄의 동굴 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/penguin) |
 | 🧠 기억력의 신 | 기억력 | [플레이](https://mindweaver74.github.io/memory) |
+| 🎤 비트박스 마스터 | 리듬 | [플레이](https://mindweaver74.github.io/beatbox) |
 
 ---
 
 ## ✨ 특징
 
-- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 12개
+- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 13개
 - iOS / Android / PC 모든 환경 지원
 - 카카오톡 링크 공유로 즉시 접속 가능
 - 게임은 계속 추가될 예정
