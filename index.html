@@ -262,160 +262,87 @@ html, body {
   .detail-item { flex-direction: row; }
 }
 </style>
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8357338943233901"
-       crossorigin="anonymous"></script>
-    <meta name="description" content="Jutopia — 설치 없이 브라우저에서 바로 즐기는 무료 HTML5 캐주얼 게임 플랫폼. 총 13개 게임 무료 플레이!">
-  <meta property="og:title" content="🎮 Jutopia — 무료 캐주얼 게임 플랫폼">
-  <meta property="og:description" content="설치 없이 바로 플레이! 슈팅·리듬·무한런·기억력 등 13개 HTML5 캐주얼 게임을 무료로 즐기세요.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mindweaver74.github.io/Jutopia">
-  <meta property="og:site_name" content="Jutopia Games">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Jutopia — 무료 캐주얼 게임 플랫폼">
-  <meta name="twitter:description" content="설치 없이 바로 플레이! 13개 HTML5 캐주얼 게임 무료 제공">
-  <link rel="canonical" href="https://mindweaver74.github.io/Jutopia">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Jutopia","url":"https://mindweaver74.github.io/Jutopia","description":"설치 없이 브라우저에서 바로 즐기는 무료 HTML5 캐주얼 게임 플랫폼","publisher":{"@type":"Person","name":"mindweaver74"}}</script>
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 </head>
 <body>
-
 <canvas id="bg-canvas"></canvas>
 
 <div id="header">
   <div id="header-title">🎮 Jutopia</div>
   <div id="header-sub">언제 어디서나 즐기는 캐주얼 게임 모음</div>
-  <div id="game-count">총 13개 게임</div>
+  <div id="game-count">총 12개 게임</div>
 </div>
 
 <div id="grid">
-
   <!-- 1. PRECISION -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/tap-rush"
-     style="--accent:linear-gradient(90deg,#4af,#a4f);--glow:rgba(80,180,255,0.6);--badge-bg:rgba(80,180,255,0.15);--badge-color:#4af;">
+  <a class="card" href="https://mindweaver74.github.io/tap-rush"
+     style="--accent:linear-gradient(90deg,#ff0,#f80);--glow:rgba(255,180,0,0.5);--badge-bg:rgba(255,180,0,0.1);--badge-color:#ff0;">
     <span class="card-emoji">🎯</span>
     <div class="card-name">PRECISION</div>
-    <div class="card-desc">원이 경계선에<br>닿기 직전에 탭!</div>
+    <div class="card-desc">원이 경계선에 닿는 순간 탭하라!<br>근접도에 따라 점수가 달라진다</div>
     <span class="card-badge">탭 타이밍</span>
   </a>
 
   <!-- 2. 너구리 뿡뿡이 -->
-  <a class="card"
-     href="https://mindweaver74.github.io/nerguri-rush"
-     style="--accent:linear-gradient(90deg,#0f9,#0cf);--glow:rgba(0,220,160,0.6);--badge-bg:rgba(0,220,160,0.12);--badge-color:#0f9;">
+  <a class="card" href="https://mindweaver74.github.io/nerguri-rush"
+     style="--accent:linear-gradient(90deg,#f84,#f44);--glow:rgba(255,100,50,0.5);--badge-bg:rgba(255,100,50,0.1);--badge-color:#f84;">
     <span class="card-emoji">🦝</span>
     <div class="card-name">너구리 뿡뿡이</div>
-    <div class="card-desc">방귀로 날아다니는<br>너구리 대탈출!</div>
+    <div class="card-desc">방귀로 날아다니는 너구리!<br>장애물을 피해 멀리 날아가라</div>
     <span class="card-badge">헬리콥터</span>
   </a>
 
   <!-- 3. 갤러가 REBORN -->
-  <a class="card"
-     href="https://mindweaver74.github.io/galuga-reborn"
-     style="--accent:linear-gradient(90deg,#f4a,#a4f);--glow:rgba(255,100,200,0.6);--badge-bg:rgba(255,100,200,0.12);--badge-color:#f4a;">
+  <a class="card" href="https://mindweaver74.github.io/galuga-reborn"
+     style="--accent:linear-gradient(90deg,#4af,#a4f);--glow:rgba(100,150,255,0.5);--badge-bg:rgba(100,150,255,0.1);--badge-color:#4af;">
     <span class="card-emoji">👾</span>
     <div class="card-name">갤러가 REBORN</div>
-    <div class="card-desc">자동 발사로<br>적을 모두 처치!</div>
+    <div class="card-desc">자동 발사로 적을 격추하라!<br>다이브봄 보스까지 처치하면 클리어</div>
     <span class="card-badge">슈팅</span>
   </a>
 
   <!-- 4. 1초를 눌러라 -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/One-Second"
-     style="--accent:linear-gradient(90deg,#ff6b35,#ff4081);--glow:rgba(255,80,100,0.6);--badge-bg:rgba(255,80,100,0.12);--badge-color:#ff6b35;">
+  <a class="card" href="https://mindweaver74.github.io/One-Second"
+     style="--accent:linear-gradient(90deg,#0f8,#0cf);--glow:rgba(0,200,150,0.5);--badge-bg:rgba(0,200,150,0.1);--badge-color:#0f8;">
     <span class="card-emoji">⏱️</span>
     <div class="card-name">1초를 눌러라!</div>
-    <div class="card-desc">정확히 1.000초에<br>손을 떼세요!</div>
+    <div class="card-desc">첫 탭으로 시작, 정확히 1초 뒤 탭!<br>밀리초 단위로 반응속도를 측정</div>
     <span class="card-badge">반응속도</span>
   </a>
 
   <!-- 5. 벽돌깨기 REBORN -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/brickblock"
-     style="--accent:linear-gradient(90deg,#fa4,#f84);--glow:rgba(255,180,50,0.6);--badge-bg:rgba(255,180,50,0.12);--badge-color:#fa4;">
+  <a class="card" href="https://mindweaver74.github.io/brickblock"
+     style="--accent:linear-gradient(90deg,#f44,#f80);--glow:rgba(255,80,0,0.5);--badge-bg:rgba(255,80,0,0.1);--badge-color:#f84;">
     <span class="card-emoji">🧱</span>
     <div class="card-name">벽돌깨기 REBORN</div>
-    <div class="card-desc">아이템으로 다이나믹하게<br>벽돌을 부수자!</div>
+    <div class="card-desc">9종 아이템으로 모든 벽돌을 깨라!<br>레이저·멀티볼·자석이 기다린다</div>
     <span class="card-badge">아케이드</span>
   </a>
 
-
   <!-- 6. 덕헌트 REBORN -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/Duck-hunt"
-     style="--accent:linear-gradient(90deg,#0f9,#fa4);--glow:rgba(0,220,140,0.6);--badge-bg:rgba(0,220,140,0.12);--badge-color:#0f9;">
+  <a class="card" href="https://mindweaver74.github.io/Duck-hunt"
+     style="--accent:linear-gradient(90deg,#0f8,#ff0);--glow:rgba(0,220,100,0.5);--badge-bg:rgba(0,220,100,0.1);--badge-color:#0f8;">
     <span class="card-emoji">🦆</span>
     <div class="card-name">덕헌트 REBORN</div>
-    <div class="card-desc">오리를 잡아라!<br>강아지가 놀려줄 걸? 🐕</div>
+    <div class="card-desc">4색 오리를 격추하라!<br>놓치면 강아지가 독한 멘트를 날린다</div>
     <span class="card-badge">슈팅</span>
   </a>
 
-
   <!-- 7. 개구리 건너기 -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/frogger"
-     style="--accent:linear-gradient(90deg,#0f0,#0cf);--glow:rgba(0,255,100,0.6);--badge-bg:rgba(0,255,100,0.12);--badge-color:#0f0;">
+  <a class="card" href="https://mindweaver74.github.io/frogger"
+     style="--accent:linear-gradient(90deg,#2a8,#0cf);--glow:rgba(0,180,120,0.5);--badge-bg:rgba(0,180,120,0.1);--badge-color:#2a8;">
     <span class="card-emoji">🐸</span>
     <div class="card-name">개구리 건너기</div>
-    <div class="card-desc">차와 강을 피해서<br>GOAL까지 건너가자!</div>
+    <div class="card-desc">차를 피하고 통나무를 타라!<br>6종 아이템으로 강을 건너자</div>
     <span class="card-badge">어드벤처</span>
   </a>
 
-
   <!-- 8. 1942 REBORN -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/1942-reborn"
-     style="--accent:linear-gradient(90deg,#f80,#f44);--glow:rgba(255,100,0,0.6);--badge-bg:rgba(255,100,0,0.12);--badge-color:#f80;">
+  <a class="card" href="https://mindweaver74.github.io/1942"
+     style="--accent:linear-gradient(90deg,#4af,#ff0);--glow:rgba(100,200,255,0.5);--badge-bg:rgba(100,200,255,0.1);--badge-color:#4af;">
     <span class="card-emoji">✈️</span>
     <div class="card-name">1942 REBORN</div>
-    <div class="card-desc">태평양 상공 32스테이지<br>레트로 복엽기로 출격!</div>
+    <div class="card-desc">복엽기로 32스테이지를 돌파!<br>폭탄·보조기·롤 회피로 생존하라</div>
     <span class="card-badge">슈팅</span>
-  </a>
-
-
-  <!-- 9. 타이밍 저격 -->
-  <a class="card card-new"
-     href="https://mindweaver74.github.io/sniper"
-     style="--accent:linear-gradient(90deg,#f00,#f80);--glow:rgba(255,50,0,0.6);--badge-bg:rgba(255,50,0,0.12);--badge-color:#f80;">
-    <span class="card-emoji" style="font-size:0;display:block;width:72px;height:72px;margin:0 auto 12px;">
-      <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
-        <!-- 너구리 얼굴 -->
-        <circle cx="36" cy="38" r="20" fill="#b8a090"/>
-        <ellipse cx="36" cy="40" rx="13" ry="10" fill="#e8ddd0"/>
-        <!-- 눈 마스크 -->
-        <ellipse cx="28" cy="34" rx="7" ry="5" fill="#2a1a0a"/>
-        <ellipse cx="44" cy="34" rx="7" ry="5" fill="#2a1a0a"/>
-        <!-- 눈 -->
-        <circle cx="28" cy="34" r="4" fill="#fff"/>
-        <circle cx="44" cy="34" r="4" fill="#fff"/>
-        <circle cx="29" cy="34" r="2.5" fill="#111"/>
-        <circle cx="45" cy="34" r="2.5" fill="#111"/>
-        <circle cx="30" cy="33" r="1" fill="#fff"/>
-        <circle cx="46" cy="33" r="1" fill="#fff"/>
-        <!-- 코 -->
-        <ellipse cx="36" cy="40" rx="3" ry="2" fill="#3a2010"/>
-        <!-- 입 -->
-        <path d="M33,42 Q36,44 39,42" stroke="#3a2010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <!-- 귀 -->
-        <ellipse cx="22" cy="22" rx="7" ry="9" fill="#8a7060"/>
-        <ellipse cx="50" cy="22" rx="7" ry="9" fill="#8a7060"/>
-        <ellipse cx="22" cy="22" rx="4" ry="6" fill="#c09080"/>
-        <ellipse cx="50" cy="22" rx="4" ry="6" fill="#c09080"/>
-        <!-- 조준경 -->
-        <circle cx="36" cy="38" r="26" fill="none" stroke="rgba(255,50,50,0.8)" stroke-width="1.5"/>
-        <circle cx="36" cy="38" r="18" fill="none" stroke="rgba(255,50,50,0.6)" stroke-width="1"/>
-        <circle cx="36" cy="38" r="4" fill="none" stroke="rgba(255,50,50,0.9)" stroke-width="1.5"/>
-        <!-- 십자선 -->
-        <line x1="8" y1="38" x2="28" y2="38" stroke="rgba(255,50,50,0.8)" stroke-width="1.5"/>
-        <line x1="44" y1="38" x2="64" y2="38" stroke="rgba(255,50,50,0.8)" stroke-width="1.5"/>
-        <line x1="36" y1="8" x2="36" y2="28" stroke="rgba(255,50,50,0.8)" stroke-width="1.5"/>
-        <line x1="36" y1="44" x2="36" y2="64" stroke="rgba(255,50,50,0.8)" stroke-width="1.5"/>
-      </svg>
-    </span>
-    <div class="card-name">타이밍 저격</div>
-    <div class="card-desc">너구리를 정확히 조준해서 탭!<br>빗맞으면 메롱~ 당한다 😜</div>
-    <span class="card-badge">타이밍</span>
   </a>
 
 
@@ -508,6 +435,8 @@ html, body {
 
 
 <!-- ── 콘텐츠 섹션 (AdSense 심사용 + 사용자 정보 제공) ── -->
+</div>
+
 <div id="content-wrap">
 
   <!-- 소개 -->
@@ -524,7 +453,7 @@ html, body {
       <div class="genre-card">
         <div class="genre-icon">⚡</div>
         <h3>반응속도 · 타이밍</h3>
-        <p>정확한 타이밍에 탭하는 순간의 짜릿함! 1초를 눌러라, PRECISION, 타이밍 저격 등 반응속도를 테스트하는 게임들입니다. 간단한 규칙이지만 친구와 기록을 비교하면 끝없이 재도전하게 됩니다.</p>
+        <p>정확한 타이밍에 탭하는 순간의 짜릿함! 1초를 눌러라, PRECISION 등 반응속도를 테스트하는 게임들입니다. 간단한 규칙이지만 친구와 기록을 비교하면 끝없이 재도전하게 됩니다.</p>
       </div>
       <div class="genre-card">
         <div class="genre-icon">🚀</div>
@@ -616,13 +545,6 @@ html, body {
         </div>
       </div>
       <div class="detail-item">
-        <span class="detail-icon">🎯</span>
-        <div>
-          <h3>타이밍 저격 — 너구리 저격</h3>
-          <p>리사주 궤적으로 움직이는 과녁의 중앙을 정확히 저격하세요! 스테이지마다 제한시간이 줄어들고 과녁이 빨라집니다. 맞힐 때마다 너구리의 재미있는 리액션(꿱/아야앙/메롱)을 볼 수 있어요.</p>
-        </div>
-      </div>
-      <div class="detail-item">
         <span class="detail-icon">👑</span>
         <div>
           <h3>왕자의 탈출 REBORN — 무한런</h3>
@@ -675,7 +597,7 @@ html, body {
       </div>
       <div class="faq-item">
         <h3>Q. 새로운 게임은 언제 추가되나요?</h3>
-        <p>Jutopia는 지속적으로 새로운 게임을 추가하고 있습니다. 현재 총 13개 게임이 서비스 중이며, 앞으로도 다양한 장르의 캐주얼 게임이 추가될 예정입니다.</p>
+        <p>Jutopia는 지속적으로 새로운 게임을 추가하고 있습니다. 현재 총 12개 게임이 서비스 중이며, 앞으로도 다양한 장르의 캐주얼 게임이 추가될 예정입니다.</p>
       </div>
     </div>
   </section>

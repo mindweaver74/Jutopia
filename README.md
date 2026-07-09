@@ -6,7 +6,7 @@
 
 ---
 
-## 🕹️ 게임 목록
+## 🕹️ 게임 목록 (총 12개)
 
 | 게임 | 장르 | 링크 |
 |------|------|------|
@@ -18,7 +18,6 @@
 | 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
 | 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
 | ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942) |
-| 🎯 타이밍 저격 | 타이밍 | [플레이](https://mindweaver74.github.io/sniper) |
 | 👑 왕자의 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/prince) |
 | 🐧 펭귄의 동굴 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/penguin) |
 | 🧠 기억력의 신 | 기억력 | [플레이](https://mindweaver74.github.io/memory) |
@@ -28,7 +27,7 @@
 
 ## ✨ 특징
 
-- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 13개
+- 모든 게임 **무료** · 설치 없이 바로 플레이 · 총 12개
 - iOS / Android / PC 모든 환경 지원
 - 카카오톡 링크 공유로 즉시 접속 가능
 - 게임은 계속 추가될 예정
@@ -57,8 +56,9 @@
 
 ```
 Jutopia/
-├── index.html   # 게임 허브 메인 페이지
-└── README.md    # 이 파일
+├── index.html      # 게임 허브 메인 페이지
+├── privacy.html    # 개인정보처리방침
+└── README.md       # 이 파일
 ```
 
 ---
