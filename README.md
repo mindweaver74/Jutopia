@@ -12,12 +12,12 @@
 |------|------|------|
 | 🎯 PRECISION | 탭 타이밍 | [플레이](https://mindweaver74.github.io/tap-rush) |
 | 🦝 너구리 뿡뿡이 | 헬리콥터 | [플레이](https://mindweaver74.github.io/nerguri-rush) |
-| 👾 갤러가 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/galuga-reborn) |
+| 👾 코스모 레이더 | 슈팅 | [플레이](https://mindweaver74.github.io/galuga-reborn) |
 | ⏱️ 1초를 눌러라! | 반응속도 | [플레이](https://mindweaver74.github.io/One-Second) |
 | 🧱 벽돌깨기 REBORN | 아케이드 | [플레이](https://mindweaver74.github.io/brickblock) |
-| 🦆 덕헌트 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
+| 🦆 날아라 오리야! | 슈팅 | [플레이](https://mindweaver74.github.io/Duck-hunt) |
 | 🐸 개구리 건너기 | 어드벤처 | [플레이](https://mindweaver74.github.io/frogger) |
-| ✈️ 1942 REBORN | 슈팅 | [플레이](https://mindweaver74.github.io/1942) |
+| ✈️ 독수리 편대 | 슈팅 | [플레이](https://mindweaver74.github.io/1942) |
 | 👑 왕자의 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/prince) |
 | 🐧 펭귄의 동굴 탈출 | 무한런 | [플레이](https://mindweaver74.github.io/penguin) |
 | 🧠 기억력의 신 | 기억력 | [플레이](https://mindweaver74.github.io/memory) |
