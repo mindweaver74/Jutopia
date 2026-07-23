@@ -65,70 +65,91 @@ html, body {
 #grid {
   position:relative; z-index:2;
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap:14px;
-  padding:0 16px 40px;
-  max-width:600px;
+  grid-template-columns: repeat(3, 1fr);
+  gap:8px;
+  padding:0 12px 40px;
+  max-width:560px;
   margin:0 auto;
 }
 
 /* 게임 카드 */
 .card {
-  background:var(--card-bg);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:20px 14px 18px;
-  text-align:center;
+  border-radius:18px;
+  overflow:hidden;
   cursor:pointer;
   text-decoration:none;
   color:#fff;
   display:block;
-  transition:transform .15s, box-shadow .15s, border-color .15s, background .15s;
   position:relative;
-  overflow:hidden;
+  aspect-ratio:3/4;
   -webkit-tap-highlight-color:transparent;
+  transition:transform .18s, box-shadow .18s;
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
 }
 .card:hover, .card:active {
-  transform:translateY(-4px) scale(1.02);
-  border-color:rgba(255,255,255,0.2);
-  background:rgba(255,255,255,0.08);
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:0 12px 32px rgba(0,0,0,0.55);
 }
-.card::before {
-  content:'';
-  position:absolute; top:0; left:0; right:0; height:2px;
-  background:var(--accent);
-  border-radius:20px 20px 0 0;
+.card-bg {
+  position:absolute;inset:0;
+  background:var(--card-grad,linear-gradient(145deg,#0a1628,#1a2a4a));
+  z-index:0;
 }
-.card-emoji {
-  font-size:52px; display:block; margin-bottom:12px;
-  filter:drop-shadow(0 0 16px var(--glow));
-  transition:transform .2s;
+.card-glow {
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 38%, var(--glow) 0%, transparent 65%);
+  opacity:0.35;
+  z-index:1;
+  transition:opacity .2s;
 }
-.card:hover .card-emoji, .card:active .card-emoji {
-  transform:scale(1.15) rotate(-5deg);
+.card:hover .card-glow,.card:active .card-glow{opacity:0.6;}
+.card-inner {
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+  padding:9px;
+  z-index:2;
 }
-.card-name {
-  font-size:16px; font-weight:700; margin-bottom:4px;
-  letter-spacing:-0.5px;
-}
-.card-desc {
-  font-size:11px; color:rgba(255,255,255,0.45); line-height:1.5;
-  margin-bottom:10px;
+.card-top {
+  display:flex;justify-content:space-between;align-items:flex-start;min-height:18px;
 }
 .card-badge {
   display:inline-block;
-  font-size:10px; font-weight:600;
-  padding:3px 10px; border-radius:20px;
+  font-size:9px;font-weight:600;
+  padding:2px 6px;border-radius:20px;
   background:var(--badge-bg);
   color:var(--badge-color);
+  border:1px solid var(--badge-color);
 }
-.card-new::after {
-  content:'NEW';
-  position:absolute; top:12px; right:12px;
-  font-size:9px; font-weight:700;
+.card-new-tag {
+  font-size:9px;font-weight:700;
   background:linear-gradient(135deg,#f84,#f4a);
-  color:#fff; padding:2px 7px; border-radius:10px;
-  letter-spacing:0.5px;
+  color:#fff;padding:2px 6px;border-radius:10px;
+}
+.card-emoji {
+  font-size:34px;
+  display:block;text-align:center;
+  filter:drop-shadow(0 0 16px var(--glow));
+  transition:transform .25s;
+  line-height:1;
+  margin:4px 0;
+}
+.card:hover .card-emoji,.card:active .card-emoji{
+  transform:scale(1.18) translateY(-4px);
+}
+.card-bottom {}
+.card-name {
+  font-size:11px;font-weight:700;
+  letter-spacing:-0.3px;margin-bottom:2px;
+  line-height:1.3;
+}
+.card-desc {
+  font-size:9px;color:rgba(255,255,255,0.5);
+  line-height:1.45;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
 }
 
 /* 푸터 */
@@ -147,17 +168,21 @@ html, body {
   from { opacity:0; transform:translateY(20px); }
   to   { opacity:1; transform:translateY(0); }
 }
-.card { animation:fadeUp .4s ease-out both; }
-.card:nth-child(1){animation-delay:.05s}
-.card:nth-child(2){animation-delay:.10s}
-.card:nth-child(3){animation-delay:.15s}
-.card:nth-child(4){animation-delay:.20s}
-.card:nth-child(5){animation-delay:.25s}
-.card:nth-child(6){animation-delay:.30s}
-.card:nth-child(7){animation-delay:.35s}
-.card:nth-child(8){animation-delay:.40s}
-.card:nth-child(9){animation-delay:.45s}
-.card:nth-child(10){animation-delay:.50s}
+.card { animation:fadeUp .35s ease-out both; }
+.card:nth-child(1){animation-delay:.03s}
+.card:nth-child(2){animation-delay:.06s}
+.card:nth-child(3){animation-delay:.09s}
+.card:nth-child(4){animation-delay:.12s}
+.card:nth-child(5){animation-delay:.15s}
+.card:nth-child(6){animation-delay:.18s}
+.card:nth-child(7){animation-delay:.21s}
+.card:nth-child(8){animation-delay:.24s}
+.card:nth-child(9){animation-delay:.27s}
+.card:nth-child(10){animation-delay:.30s}
+.card:nth-child(11){animation-delay:.33s}
+.card:nth-child(12){animation-delay:.36s}
+.card:nth-child(13){animation-delay:.39s}
+.card:nth-child(14){animation-delay:.42s}
 .card:nth-child(11){animation-delay:.55s}
 
 /* ── 콘텐츠 섹션 CSS ── */
@@ -285,84 +310,170 @@ html, body {
 
 <div id="grid">
   <!-- 1. PRECISION -->
-  <a class="card" href="https://mindweaver74.github.io/tap-rush"
-     style="--accent:linear-gradient(90deg,#ff0,#f80);--glow:rgba(255,180,0,0.5);--badge-bg:rgba(255,180,0,0.1);--badge-color:#ff0;">
+  <a class="card"
+     href="https://mindweaver74.github.io/tap-rush"
+     style="--card-grad:linear-gradient(145deg,#1a1000,#2a1f00,#1a1200);--glow:rgba(255,180,0,0.4);--badge-bg:rgba(255,180,0,0.1);--badge-color:#ff0">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">탭 타이밍</span>
+      
+    </div>
     <span class="card-emoji">🎯</span>
-    <div class="card-name">PRECISION</div>
-    <div class="card-desc">원이 경계선에 닿는 순간 탭하라!<br>근접도에 따라 점수가 달라진다</div>
-    <span class="card-badge">탭 타이밍</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">PRECISION</div>
+      <div class="card-desc">원이 경계선에 닿는 순간 탭하라!<br>근접도에 따라 점수가 달라진다</div>
+    </div>
+  </div>
+</a>
 
   <!-- 2. 너구리 뿡뿡이 -->
-  <a class="card" href="https://mindweaver74.github.io/nerguri-rush"
-     style="--accent:linear-gradient(90deg,#f84,#f44);--glow:rgba(255,100,50,0.5);--badge-bg:rgba(255,100,50,0.1);--badge-color:#f84;">
+  <a class="card"
+     href="https://mindweaver74.github.io/nerguri-rush"
+     style="--card-grad:linear-gradient(145deg,#1a0a00,#2a1500,#180800);--glow:rgba(255,100,50,0.4);--badge-bg:rgba(255,100,50,0.1);--badge-color:#f84">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">헬리콥터</span>
+      
+    </div>
     <span class="card-emoji">🦝</span>
-    <div class="card-name">너구리 뿡뿡이</div>
-    <div class="card-desc">방귀로 날아다니는 너구리!<br>장애물을 피해 멀리 날아가라</div>
-    <span class="card-badge">헬리콥터</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">너구리 뿡뿡이</div>
+      <div class="card-desc">방귀로 날아다니는 너구리!<br>장애물을 피해 멀리 날아가라</div>
+    </div>
+  </div>
+</a>
 
   <!-- 3. 코스모 레이더 -->
-  <a class="card" href="https://mindweaver74.github.io/cosmo-radar"
-     style="--accent:linear-gradient(90deg,#4af,#a4f);--glow:rgba(100,150,255,0.5);--badge-bg:rgba(100,150,255,0.1);--badge-color:#4af;">
+  <a class="card"
+     href="https://mindweaver74.github.io/cosmo-radar"
+     style="--card-grad:linear-gradient(145deg,#00081a,#001228,#000c1a);--glow:rgba(68,170,255,0.4);--badge-bg:rgba(100,150,255,0.1);--badge-color:#4af">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">슈팅</span>
+      
+    </div>
     <span class="card-emoji">👾</span>
-    <div class="card-name">코스모 레이더</div>
-    <div class="card-desc">자동 발사로 적을 격추하라!<br>다이브봄 보스까지 처치하면 클리어</div>
-    <span class="card-badge">슈팅</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">코스모 레이더</div>
+      <div class="card-desc">자동 발사로 적을 격추하라!<br>다이브봄 보스까지 처치하면 클리어</div>
+    </div>
+  </div>
+</a>
 
   <!-- 4. 1초를 눌러라 -->
-  <a class="card" href="https://mindweaver74.github.io/One-Second"
-     style="--accent:linear-gradient(90deg,#0f8,#0cf);--glow:rgba(0,200,150,0.5);--badge-bg:rgba(0,200,150,0.1);--badge-color:#0f8;">
+  <a class="card"
+     href="https://mindweaver74.github.io/One-Second"
+     style="--card-grad:linear-gradient(145deg,#001a10,#002818,#001208);--glow:rgba(0,240,136,0.4);--badge-bg:rgba(0,200,150,0.1);--badge-color:#0f8">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">반응속도</span>
+      
+    </div>
     <span class="card-emoji">⏱️</span>
-    <div class="card-name">1초를 눌러라!</div>
-    <div class="card-desc">첫 탭으로 시작, 정확히 1초 뒤 탭!<br>밀리초 단위로 반응속도를 측정</div>
-    <span class="card-badge">반응속도</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">1초를 눌러라!</div>
+      <div class="card-desc">첫 탭으로 시작, 정확히 1초 뒤 탭!<br>밀리초 단위로 반응속도를 측정</div>
+    </div>
+  </div>
+</a>
 
   <!-- 5. 벽돌깨기 REBORN -->
-  <a class="card" href="https://mindweaver74.github.io/brickblock"
-     style="--accent:linear-gradient(90deg,#f44,#f80);--glow:rgba(255,80,0,0.5);--badge-bg:rgba(255,80,0,0.1);--badge-color:#f84;">
+  <a class="card"
+     href="https://mindweaver74.github.io/brickblock"
+     style="--card-grad:linear-gradient(145deg,#1a0800,#2a1000,#180600);--glow:rgba(255,80,0,0.4);--badge-bg:rgba(255,80,0,0.1);--badge-color:#f84">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">아케이드</span>
+      
+    </div>
     <span class="card-emoji">🧱</span>
-    <div class="card-name">벽돌깨기 REBORN</div>
-    <div class="card-desc">9종 아이템으로 모든 벽돌을 깨라!<br>레이저·멀티볼·자석이 기다린다</div>
-    <span class="card-badge">아케이드</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">벽돌깨기 REBORN</div>
+      <div class="card-desc">9종 아이템으로 모든 벽돌을 깨라!<br>레이저·멀티볼·자석이 기다린다</div>
+    </div>
+  </div>
+</a>
 
   <!-- 6. 날아라 오리야! -->
-  <a class="card" href="https://mindweaver74.github.io/Duck-hunt"
-     style="--accent:linear-gradient(90deg,#0f8,#ff0);--glow:rgba(0,220,100,0.5);--badge-bg:rgba(0,220,100,0.1);--badge-color:#0f8;">
+  <a class="card"
+     href="https://mindweaver74.github.io/Duck-hunt"
+     style="--card-grad:linear-gradient(145deg,#0a1800,#142400,#081200);--glow:rgba(0,220,100,0.4);--badge-bg:rgba(0,220,100,0.1);--badge-color:#0f8">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">슈팅</span>
+      
+    </div>
     <span class="card-emoji">🦆</span>
-    <div class="card-name">날아라 오리야!</div>
-    <div class="card-desc">4색 오리를 격추하라!<br>놓치면 강아지가 독한 멘트를 날린다</div>
-    <span class="card-badge">슈팅</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">날아라 오리야!</div>
+      <div class="card-desc">4색 오리를 격추하라!<br>놓치면 강아지가 독한 멘트를 날린다</div>
+    </div>
+  </div>
+</a>
 
   <!-- 7. 개구리 건너기 -->
-  <a class="card" href="https://mindweaver74.github.io/frogger"
-     style="--accent:linear-gradient(90deg,#2a8,#0cf);--glow:rgba(0,180,120,0.5);--badge-bg:rgba(0,180,120,0.1);--badge-color:#2a8;">
+  <a class="card"
+     href="https://mindweaver74.github.io/frogger"
+     style="--card-grad:linear-gradient(145deg,#001a08,#002810,#001206);--glow:rgba(30,180,120,0.4);--badge-bg:rgba(0,180,120,0.1);--badge-color:#2a8">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">어드벤처</span>
+      
+    </div>
     <span class="card-emoji">🐸</span>
-    <div class="card-name">개구리 건너기</div>
-    <div class="card-desc">차를 피하고 통나무를 타라!<br>6종 아이템으로 강을 건너자</div>
-    <span class="card-badge">어드벤처</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">개구리 건너기</div>
+      <div class="card-desc">차를 피하고 통나무를 타라!<br>6종 아이템으로 강을 건너자</div>
+    </div>
+  </div>
+</a>
 
   <!-- 8. 독수리 편대 -->
-  <a class="card" href="https://mindweaver74.github.io/1942"
-     style="--accent:linear-gradient(90deg,#4af,#ff0);--glow:rgba(100,200,255,0.5);--badge-bg:rgba(100,200,255,0.1);--badge-color:#4af;">
+  <a class="card"
+     href="https://mindweaver74.github.io/1942"
+     style="--card-grad:linear-gradient(145deg,#00101a,#001828,#000c14);--glow:rgba(68,200,255,0.4);--badge-bg:rgba(100,200,255,0.1);--badge-color:#4af">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">슈팅</span>
+      
+    </div>
     <span class="card-emoji">✈️</span>
-    <div class="card-name">독수리 편대</div>
-    <div class="card-desc">복엽기로 32스테이지를 돌파!<br>폭탄·보조기·롤 회피로 생존하라</div>
-    <span class="card-badge">슈팅</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">독수리 편대</div>
+      <div class="card-desc">복엽기로 32스테이지를 돌파!<br>폭탄·보조기·롤 회피로 생존하라</div>
+    </div>
+  </div>
+</a>
 
 
   <!-- 10. 왕자의 탈출 REBORN -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/prince"
-     style="--accent:linear-gradient(90deg,#ffd700,#f84);--glow:rgba(255,180,0,0.6);--badge-bg:rgba(255,180,0,0.12);--badge-color:#ffd700;">
-    <span class="card-emoji" style="font-size:0;display:block;width:72px;height:72px;margin:0 auto 12px;">
-      <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+     style="--card-grad:linear-gradient(145deg,#1a1200,#281c00,#14100,#0a0800);--glow:rgba(255,215,0,0.4);--badge-bg:rgba(255,180,0,0.12);--badge-color:#ffd700">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">무한런</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
+    <span class="card-emoji"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
         <!-- 배경 원 -->
         <circle cx="36" cy="36" r="34" fill="rgba(255,180,0,0.15)" stroke="rgba(255,180,0,0.4)" stroke-width="1.5"/>
 
@@ -402,66 +513,110 @@ html, body {
         <circle cx="36" cy="12" r="1.5" fill="#f44"/>
         <circle cx="29" cy="14" r="1" fill="#f44"/>
         <circle cx="43" cy="14" r="1" fill="#f44"/>
-      </svg>
-    </span>
-    <div class="card-name">왕자의 탈출</div>
-    <div class="card-desc">탭해서 점프! 코인 모아 업그레이드<br>추격자를 피해 멀리 달려라!</div>
-    <span class="card-badge">무한런</span>
-  </a>
+      </svg></span>
+    <div class="card-bottom">
+      <div class="card-name">왕자의 탈출</div>
+      <div class="card-desc">탭해서 점프! 코인 모아 업그레이드<br>추격자를 피해 멀리 달려라!</div>
+    </div>
+  </div>
+</a>
 
 
   <!-- 11. 펭귄의 동굴 탈출 -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/penguin"
-     style="--accent:linear-gradient(90deg,#4af,#a4f);--glow:rgba(100,150,255,0.6);--badge-bg:rgba(100,150,255,0.12);--badge-color:#4af;">
+     style="--card-grad:linear-gradient(145deg,#00081a,#000e28,#000618);--glow:rgba(100,180,255,0.4);--badge-bg:rgba(100,150,255,0.12);--badge-color:#4af">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">무한런</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
     <span class="card-emoji">🐧</span>
-    <div class="card-name">펭귄의 동굴 탈출</div>
-    <div class="card-desc">드래그로 피하고 점프대로 점프!<br>절벽을 건너 동굴을 탈출하라</div>
-    <span class="card-badge">무한런</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">펭귄의 동굴 탈출</div>
+      <div class="card-desc">드래그로 피하고 점프대로 점프!<br>절벽을 건너 동굴을 탈출하라</div>
+    </div>
+  </div>
+</a>
 
 
   <!-- 12. 기억력의 신 -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/memory"
-     style="--accent:linear-gradient(90deg,#ff007f,#7928ca);--glow:rgba(255,0,127,0.6);--badge-bg:rgba(255,0,127,0.12);--badge-color:#ff007f;">
+     style="--card-grad:linear-gradient(145deg,#180028,#240040,#10001c);--glow:rgba(200,100,255,0.4);--badge-bg:rgba(255,0,127,0.12);--badge-color:#ff007f">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">기억력</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
     <span class="card-emoji">🧠</span>
-    <div class="card-name">기억력의 신</div>
-    <div class="card-desc">카드를 외우고 짝을 맞춰라!<br>4장에서 36장까지 점점 늘어나는 도전</div>
-    <span class="card-badge">기억력</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">기억력의 신</div>
+      <div class="card-desc">카드를 외우고 짝을 맞춰라!<br>4장에서 36장까지 점점 늘어나는 도전</div>
+    </div>
+  </div>
+</a>
 
 
   <!-- 13. 비트박스 마스터 -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/beatbox"
-     style="--accent:linear-gradient(90deg,#4af,#c4f,#ffd700);--glow:rgba(150,100,255,0.6);--badge-bg:rgba(150,100,255,0.12);--badge-color:#c4f;">
+     style="--card-grad:linear-gradient(145deg,#1a0018,#280028,#100010);--glow:rgba(255,0,200,0.4);--badge-bg:rgba(150,100,255,0.12);--badge-color:#c4f">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">리듬</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
     <span class="card-emoji">🎤</span>
-    <div class="card-name">비트박스 마스터</div>
-    <div class="card-desc">B·S·K 비트를 타이밍에 맞춰 격파!<br>10콤보면 싸이퍼 피버타임 발동!</div>
-    <span class="card-badge">리듬</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">비트박스 마스터</div>
+      <div class="card-desc">B·S·K 비트를 타이밍에 맞춰 격파!<br>10콤보면 싸이퍼 피버타임 발동!</div>
+    </div>
+  </div>
+</a>
 
 
-  <!-- 13. 숫자 합치기 -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/puzzle2048"
-     style="--accent:linear-gradient(90deg,#4af,#ffd700);--glow:rgba(100,200,255,0.6);--badge-bg:rgba(100,200,255,0.12);--badge-color:#4af;">
+     style="--card-grad:linear-gradient(145deg,#001828,#002038,#001020);--glow:rgba(68,200,255,0.4);--badge-bg:rgba(68,200,255,0.12);--badge-color:#4af;">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">퍼즐</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
     <span class="card-emoji">🔢</span>
-    <div class="card-name">숫자 합치기</div>
-    <div class="card-desc">같은 숫자를 합쳐 2048을 만들어라!<br>네온 감성의 중독성 숫자 퍼즐</div>
-    <span class="card-badge">퍼즐</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">숫자 합치기</div>
+      <div class="card-desc">같은 숫자를 합쳐 2048을 만들어라!</div>
+    </div>
+  </div>
+</a>
 
-  <!-- 14. 하늘 위로 -->
   <a class="card card-new"
      href="https://mindweaver74.github.io/jumpman"
-     style="--accent:linear-gradient(90deg,#87ceeb,#4af);--glow:rgba(135,206,235,0.6);--badge-bg:rgba(135,206,235,0.12);--badge-color:#4af;">
+     style="--card-grad:linear-gradient(145deg,#001220,#001e30,#000e18);--glow:rgba(135,206,235,0.4);--badge-bg:rgba(135,206,235,0.12);--badge-color:#4af;">
+  <div class="card-bg"></div>
+  <div class="card-glow"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <span class="card-badge">점프</span>
+      <span class="card-new-tag">NEW</span>
+    </div>
     <span class="card-emoji">🕴️</span>
-    <div class="card-name">하늘 위로!</div>
-    <div class="card-desc">발판을 밟고 새를 피하며 하늘 위로!<br>스프링·슈퍼점프로 최고 높이 도전</div>
-    <span class="card-badge">점프</span>
-  </a>
+    <div class="card-bottom">
+      <div class="card-name">하늘 위로!</div>
+      <div class="card-desc">발판을 밟고 새를 피하며 하늘 위로!</div>
+    </div>
+  </div>
+</a>
 
 </div>
 
@@ -549,11 +704,6 @@ html, body {
         <div class="genre-icon">🐸</div>
         <h3>어드벤처 · 캐주얼</h3>
         <p>개구리 건너기처럼 클래식 게임을 재해석한 어드벤처 게임도 있습니다. 너구리 뿡뿡이의 헬리콥터 스타일 플레이까지, 누구나 쉽게 즐길 수 있는 캐주얼 게임들입니다.</p>
-      </div>
-      <div class="genre-card">
-        <div class="genre-icon">🕴️</div>
-        <h3>점프 · 플랫포머</h3>
-        <p>하늘 위로!는 발판을 밟으며 끝없이 위로 올라가는 점프 게임입니다. 스프링(x2)과 슈퍼 발판(x3)으로 단번에 치솟고, 날아다니는 새를 피하며 최고 높이 기록에 도전하세요!</p>
       </div>
     </div>
   </section>
@@ -645,20 +795,6 @@ html, body {
         <div>
           <h3>비트박스 마스터 — 리듬</h3>
           <p>B·S·K 세 개의 레인에서 떨어지는 노트를 타이밍에 맞춰 격파! PERFECT/GREAT/GOOD/MISS 4단계 판정, 10콤보 달성 시 싸이퍼 피버타임으로 점수 2배. Jutopia 마스코트들이 관객으로 등장합니다.</p>
-        </div>
-      </div>
-      <div class="detail-item">
-        <span class="detail-icon">🔢</span>
-        <div>
-          <h3>숫자 합치기 — 퍼즐</h3>
-          <p>4×4 격자판에서 같은 숫자 타일을 합쳐 2048을 만드는 숫자 퍼즐 게임입니다. 스와이프 하나로 모든 타일이 한쪽으로 이동하고, 같은 숫자끼리 만나면 2배로 합쳐집니다. 큰 숫자를 한쪽 모서리에 모아두는 전략이 핵심! 콤보 보너스, 이어하기, 네온 파티클 이펙트까지 갖춘 Jutopia 감성의 2048입니다.</p>
-        </div>
-      </div>
-      <div class="detail-item">
-        <span class="detail-icon">🕴️</span>
-        <div>
-          <h3>하늘 위로! — 점프</h3>
-          <p>안경 쓴 치비 캐릭터가 발판을 밟으며 하늘 위로 끝없이 도약하는 점프 게임입니다. 일반·이동·스프링(x2)·슈퍼(x3) 4종 발판과 날아다니며 방해하는 새를 피해 최고 높이 기록에 도전하세요. 높이 올라갈수록 하늘이 낮에서 밤하늘로 바뀌며, 코인을 모아 누적 기록도 확인할 수 있습니다.</p>
         </div>
       </div>
     </div>
